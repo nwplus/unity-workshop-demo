@@ -11,11 +11,10 @@ public class Wall : MonoBehaviour {
         _rigid = GetComponent<Rigidbody2D>();
     }
 
-
+    // Update is called once per frame
     void Update() {
-        if (transform.position.x <= -15f) {
-            Destroy(this.gameObject);
-        }
+        if (transform.position.x <= -15f)
+            Destroy(gameObject);
     }
 
 
