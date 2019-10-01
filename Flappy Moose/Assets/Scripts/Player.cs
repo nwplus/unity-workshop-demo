@@ -43,7 +43,5 @@ public class Player : MonoBehaviour {
 
 
     void GameOver() {
-        Destroy(gameObject);
-        GameManager.GameOver();
     }
 }
