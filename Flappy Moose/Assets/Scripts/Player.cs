@@ -1,61 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
     
-    public GameManager GameManager;
-
+    //The amount of force to apply when the jump button is pressed
     public Vector2 Force = new Vector2(0, 5);
+
+    //Variable to hold the physics component of the player
     private Rigidbody2D _rigid;
 
+    //Boolean letting us know whether the jump button was pressed
     private bool _jump = false;
+
+    //The max and min height the player is allowed to go to
     private float _minY;
     private float _maxY;
     
     
     // Start is called before the first frame update
     void Awake() {
-        _rigid = GetComponent<Rigidbody2D>();
-        
-        Vector3 topRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        Vector3 bottomLeft = Camera.main.ScreenToWorldPoint(Vector3.zero);
-        _minY = bottomLeft.y;
-        _maxY = topRight.y;
+
     }
 
-    void Update() {
-        if (transform.position.y < _minY)
-            GameOver();
-        if (transform.position.y > _maxY)
-            GameOver();
-        
-        if (Input.GetKeyDown(KeyCode.Space) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)) {
-            _jump = true;
-        }
-    }
-
-    
     // Update is called once per frame
+    void Update() {
+    }
+
+    //Fixed update is called at set intervals every x seconds
     void FixedUpdate()
     {
-        if (_jump) {
-            _rigid.velocity = Vector2.zero;
-            _rigid.AddForce(Force, ForceMode2D.Impulse);
-            _jump = false;
-        }
+
     }
 
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.isTrigger) 
-            GameManager.IncreaseScore();
     }
 
     
     
     private void OnCollisionEnter2D(Collision2D other) {
-        GameOver();
     }
 
 
