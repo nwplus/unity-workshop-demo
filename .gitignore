@@ -11,6 +11,13 @@
 /code/[Bb]uilds/
 /code/[Ll]ogs/
 /code/[Mm]emoryCaptures/
+/flappy\ moose/[Ll]ibrary/
+/flappy\ moose/[Tt]emp/
+/flappy\ moose/[Oo]bj/
+/flappy\ moose/[Bb]uild/
+/flappy\ moose/[Bb]uilds/
+/flappy\ moose/[Ll]ogs/
+/flappy\ moose/[Mm]emoryCaptures/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
