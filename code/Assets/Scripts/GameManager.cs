@@ -6,60 +6,64 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-    public GameObject Pillar;
-    public GameObject Fade;
-
-    public float MaxSpawnY;
-    public float MinSpawnY;
-    public float PillarSpeed;
-    public float PillarSpawnTime;
+    
+    public GameObject pillar;
+    public GameObject fade;
+    
+    public float MaxY = 3f;
+    public float MinY = -3f;
+    public float PillarSpeed = 3;
     
     public Text ScoreText;
     
     public GameObject GameOverText;
     public GameObject RestartButton;
-
-    private int _score;
-    private float _time;
     
+    private int _score = 0;
+    private float _spawnTime = 2f;
+    private float _time = 0f;
 
-
-    // Update is called once per frame
+    private bool _gameOver = false;
+    
     void Update() {
         _time += Time.deltaTime;
-        if (_time >= PillarSpawnTime) {
+        if (_time >= _spawnTime) {
             SpawnPillar();
             _time = 0f;
         }
+        
+        if(_gameOver && Input.anyKeyDown)
+            Restart();
     }
-    
-    
+
 
     void SpawnPillar() {
-        float y = Random.Range(MinSpawnY, MaxSpawnY);
+
+        float y = Random.Range(MinY, MaxY);
         Vector2 pos = new Vector2(13, y);
-        GameObject newPillar = Instantiate(Pillar, pos,  Quaternion.identity) as GameObject;
+        GameObject newPillar = Instantiate(pillar, pos, Quaternion.identity) as GameObject;
         newPillar.GetComponent<Wall>().SetSpeed(PillarSpeed);
     }
-
-
-
+    
+    
+    
+    
     public void IncreaseScore() {
-        _score++;
+        _score += 1;
         ScoreText.text = _score.ToString();
     }
 
-
+    
 
     public void GameOver() {
-        Fade.SetActive(true);
+        fade.SetActive(true);
         GameOverText.SetActive(true);
         RestartButton.SetActive(true);
+        _gameOver = true;
     }
 
 
-
     public void Restart() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(Application.loadedLevel);
     }
 }
