@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     
     //The amount of force to apply when the jump button is pressed
-    public Vector2 Force = new Vector2(0, 5);
+    public Vector2 Force = new Vector2(0, 6);
 
     //Variable to hold the physics component of the player
     private Rigidbody2D _rigid;
@@ -26,8 +26,7 @@ public class Player : MonoBehaviour {
     }
 
     //Fixed update is called at set intervals every x seconds
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
 
     }
 
