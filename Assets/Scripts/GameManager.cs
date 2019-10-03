@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -41,7 +41,9 @@ public class GameManager : MonoBehaviour {
     void Update() {
         _time += Time.deltaTime;
         if (_time >= _spawnTime) {
-            SpawnPillar();
+            if (Pillar != null){
+                SpawnPillar();
+            }
             _time = 0f;
         }
 	
