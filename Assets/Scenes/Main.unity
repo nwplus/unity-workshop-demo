@@ -960,7 +960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af141d8f5e4d745b4b53b422e0a8a274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pillar: {fileID: 1134637523473944, guid: 270fda750bc3d214ca13230ef0248889, type: 2}
+  Pillar: {fileID: 0}
   fade: {fileID: 1263715845}
   MaxSpawnY: 3
   MinSpawnY: -3
