@@ -959,10 +959,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af141d8f5e4d745b4b53b422e0a8a274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pillar: {fileID: 0}
+  Pillar: {fileID: 0}
   fade: {fileID: 0}
-  MaxY: 3
-  MinY: -3
+  MaxSpawnY: 3
+  MinSpawnY: -3
   PillarSpeed: 3
   ScoreText: {fileID: 0}
   GameOverText: {fileID: 0}
