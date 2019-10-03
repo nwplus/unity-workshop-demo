@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     
+    public GameManager GameManager;
     //The amount of force to apply when the jump button is pressed
     public Vector2 Force = new Vector2(0, 6);
 

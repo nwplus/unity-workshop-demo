@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3eaf724599b44e1baad4f0b6365065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameManager: {fileID: 1239145337}
   Force: {x: 0, y: 6}
 --- !u!60 &30727368
 PolygonCollider2D:
