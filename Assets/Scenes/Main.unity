@@ -552,7 +552,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -835,7 +835,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -960,7 +960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af141d8f5e4d745b4b53b422e0a8a274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pillar: {fileID: 0}
+  Pillar: {fileID: 1134637523473944, guid: 270fda750bc3d214ca13230ef0248889, type: 2}
   fade: {fileID: 1263715845}
   MaxSpawnY: 3
   MinSpawnY: -3
@@ -1031,7 +1031,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 9c900e13a7b114eadab42d2d1b18e2d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
