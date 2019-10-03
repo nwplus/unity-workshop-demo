@@ -961,13 +961,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pillar: {fileID: 0}
-  fade: {fileID: 0}
+  fade: {fileID: 1263715845}
   MaxSpawnY: 3
   MinSpawnY: -3
   PillarSpeed: 3
-  ScoreText: {fileID: 0}
-  GameOverText: {fileID: 0}
-  RestartButton: {fileID: 0}
+  ScoreText: {fileID: 1133457289}
+  GameOverText: {fileID: 750110665}
+  RestartButton: {fileID: 1892635196}
 --- !u!4 &1239145338
 Transform:
   m_ObjectHideFlags: 0
