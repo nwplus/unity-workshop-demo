@@ -965,7 +965,7 @@ MonoBehaviour:
   MaxSpawnY: 3
   MinSpawnY: -3
   PillarSpeed: 3
-  ScoreText: {fileID: 1133457289}
+  ScoreText: {fileID: 1803777943}
   GameOverText: {fileID: 750110665}
   RestartButton: {fileID: 1892635196}
 --- !u!4 &1239145338
